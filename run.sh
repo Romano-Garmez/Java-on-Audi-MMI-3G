@@ -16,7 +16,7 @@ $SDPath/utils/showScreen $SDPath/screens/scriptStart.png
 
 #$SDPath/j9/bin/j9 -help > $SDPath/logs/j9help.txt 2> $SDPath/logs/j9helperr.txt
 
-#$SDPath/j9/bin/j9 -Dcom.ibm.oti.vm.bootstrap.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:$SDPath/j9/bin -Djava.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:$SDPath/j9/bin "-Xbootclasspath:$SDPath/j9/bin/j9vm/jclSC150/vm.jar" -cp "$SDPath/test" helloworld > $SDPath/logs/helloworldOUT.txt 2> $SDPath/logs/helloworldERR.txt
+#$SDPath/j9/bin/j9 -Dcom.ibm.oti.vm.bootstrap.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/j9/bin -Djava.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/j9/bin "-Xbootclasspath:$SDPath/j9/bin/j9vm/jclSC150/vm.jar" -cp "$SDPath/test" helloworld > $SDPath/logs/helloworldOUT.txt 2> $SDPath/logs/helloworldERR.txt
 
 $SDPath/j9/bin/j9 -Dcom.ibm.oti.vm.bootstrap.library.path=$SDPath/j9/bin -Djava.library.path=$SDPath/j9/bin -cp "$SDPath/j9/bin/j9vm/jclSC150/vm.jar:$SDPath/test" helloworld > $SDPath/logs/helloworldOUT.txt 2> $SDPath/logs/helloworldERR.txt
 

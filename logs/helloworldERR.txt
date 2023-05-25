@@ -1,3 +1,0 @@
-
-Process 340030 (j9) terminated SIGSEGV code=1 fltno=11 ip=7034f400 mapaddr=0004e400. ref=07fbffec
-Memory fault (core dumped) 
