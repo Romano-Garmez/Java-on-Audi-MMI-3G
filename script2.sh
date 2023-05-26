@@ -9,7 +9,7 @@ SDPath=/mnt/$sdcard
 
 
 ## Java path setup:
-export JAVA_HOME=$SDPath/j9
+export JAVA_HOME={SDPATH}/j9
 export PATH=$JAVA_HOME/bin:$PATH
 
 #ETCDIR=/lsd
@@ -161,11 +161,11 @@ BOOTCLASSPATH="$BOOTCLASSPATH:$JXE"
 
 	## compile class path for VM call
 	#JARS=$(ls $BASEDIR/*.jar)
-	JARS=$(ls $SDPath/j9/bin/j9vm/jclSC150/*.jar)
-	CLASSPATH=$SDPath/test
+	JARS=$(ls {SDPATH}/j9/bin/j9vm/jclSC150/*.jar)
+	CLASSPATH={SDPATH}/test
 	for jar in $JARS; do
 		CLASSPATH="$CLASSPATH:$jar"
 	done
 	set -x
-	$SDPath/j9/bin/j9 $VMOPTIONS -cp "$CLASSPATH" helloworld
+	{SDPATH}/j9/bin/j9 $VMOPTIONS -cp "$CLASSPATH" helloworld
 	set +x
