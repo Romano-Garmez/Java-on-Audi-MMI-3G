@@ -38,7 +38,7 @@ BOOTCLASSPATH=-Xbootclasspath
 
 	## compile class path for VM call
 	#JARS=$(ls $BASEDIR/*.jar)
-	JARS=$(ls {SDPATH}/j9/lib/*.jar)
+	JARS=$(ls {SDPATH}/j9/jars/*.jar)
 	CLASSPATH={SDPATH}/test
 	for jar in $JARS; do
 		BOOTCLASSPATH="$BOOTCLASSPATH::$jar"
