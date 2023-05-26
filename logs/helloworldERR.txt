@@ -1,0 +1,10 @@
++ /mnt/sdcard10t11/j9/bin/j9 -Djava.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/mnt/sdcard10t11/j9/bin: -Dcom.ibm.oti.vm.bootstrap.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/mnt/sdcard10t11/j9/bin: -Xmca8k -Xmco8k -Xmo16384k -Xmoi0 -Xmn512k -Xmx18432k -Dstartup.max.prepare.wait=10000 -Dstartup.max.domain.wait=10000 -DNoTmcReadOut -DTmcWindowSize=15 -Djdsi.3SoftOSGi=true -Ddsi.debuglevel=2 -Djdsi.noDispatcher -Ddsi.channel.priority=+1 -Ddsi.decoder.priority=+1 -Ddsi.maxPacketLength=16384 -Ddsi.channel=msgpassing -cp /mnt/sdcard10t11/test:/mnt/sdcard10t11/j9/bin/j9vm/jclSC150/vm.jar helloworld
+JVMJ9VM019E Fatal error: Unable to find and initialize required class java/lang/J9VMInternals
+JVMJ9VM020I Searched in /mnt/sdcard10t11/j9/lib/jclFoundation10/classes.zip
+JVMJ9VM020I Searched in /mnt/sdcard10t11/j9/lib/charconv.zip
+JVMJ9VM020I Searched in /mnt/sdcard10t11/j9/lib/jclFoundation10/locale.zip
+JVMJ9VM023I This may indicate that JAVA_HOME is incorrect, or that class libraries are not installed
+JVMJ9VM015W Initialization error for library jclfoun10_23(14): JVMJ9VM009E J9VMDllMain failed
+JVMEXEX013E Internal VM error: Failed to create Java VM
+JVMEXEX014I Run /mnt/sdcard10t11/j9/bin/j9 -help for usage
++ set +x
