@@ -1,12 +1,6 @@
 ##
 ## Path setup:
 ##
-sdcard=`ls /mnt|grep sdcard.*t`
-
-# Full path
-SDPath=/mnt/$sdcard
-
-
 
 ## Java path setup:
 export JAVA_HOME={SDPATH}/j9

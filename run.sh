@@ -1,11 +1,4 @@
 #!/bin/ksh
-sdcard=`ls /mnt|grep sdcard.*t`
-
-# Full path
-SDPath=/mnt/$sdcard
-
-# Mount in read/write mode
-mount -u {SDPATH}
 
 # Show start screen
 {SDPATH}/utils/showScreen {SDPATH}/screens/scriptStart.png
