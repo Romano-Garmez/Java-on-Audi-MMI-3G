@@ -24,9 +24,6 @@ VMOPTIONS="$VMOPTIONS -Xmca8k -Xmco8k -Xmo16384k -Xmoi0 -Xmn512k -Xmx18432k"
 ## Launch:
 ##
 
-## add extra command line options to VM options
-VMOPTIONS="$VMOPTIONS $@"
-
 ##
 ## Setup boot class path / conditionally include TestServer and DSITracer:
 ##
@@ -41,8 +38,12 @@ BOOTCLASSPATH=-Xbootclasspath
 	JARS=$(ls {SDPATH}/j9/jars/*.jar)
 	CLASSPATH={SDPATH}/test
 	for jar in $JARS; do
-		BOOTCLASSPATH="$BOOTCLASSPATH::$jar"
+		BOOTCLASSPATH="$BOOTCLASSPATH:$jar"
+	done
+	ZIPS=$(ls {SDPATH}/j9/lib/*.zip)
+	for zip in $ZIPS; do
+		BOOTCLASSPATH="$BOOTCLASSPATH:$zip"
 	done
 	set -x
-	{SDPATH}/j9/bin/j9 $VMOPTIONS -cp "$CLASSPATH" helloworld
+	{SDPATH}/j9/bin/j9 $VMOPTIONS $BOOTCLASSPATH -cp "$CLASSPATH" helloworld
 	set +x
