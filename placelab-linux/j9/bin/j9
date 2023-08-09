@@ -1,0 +1,15 @@
+#!/bin/sh
+
+
+BASE=`basename $0`
+DIR=`echo $0 | sed -e s/$BASE$//g`
+if [ "$DIR" = "" ] ; then
+	DIR="."
+fi
+
+#DIR=`CMDLINE=$0 perl -e '@parts = split(/\//, $ENV{CMDLINE}); pop @parts; print join("/", @parts);'`
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DIR
+${DIR}j9.bin -Xbootclasspath:${DIR}../lib/classes.zip "$@"
+

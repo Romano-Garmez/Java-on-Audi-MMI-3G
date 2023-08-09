@@ -1,0 +1,14 @@
+#--------------------------------------------------------------------
+# (c) Copyright IBM Corp 1999, 2003
+#--------------------------------------------------------------------
+# jxeLink options for jclCdc
+#--------------------------------------------------------------------
+
+-cp "{{jxeLink.current.file.dir}}{{/}}jclCdc{{/}}classes.zip"
+-cp "{{jxeLink.current.file.dir}}{{/}}charconv.zip"
+-cp "{{jxeLink.current.file.dir}}{{/}}jclCdc{{/}}locale.zip"
+
+#--------------------------------------------------------------------
+# Turn off the extension class loader
+#--------------------------------------------------------------------
+-vmOption -Djava.ext.dirs=

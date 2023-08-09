@@ -1,0 +1,40 @@
+# Makefile for module 'exe.j9wmidp'
+# (c) Copyright IBM Corp. 2001, 2002 All Rights Reserved
+# Timestamp: 2.0, 9/16/02
+#
+#
+
+APPVER=4.0
+TARGETOS=WIN95
+SEHMAP = TRUE
+!include <win32.mak>
+
+EXENAME=..\j9wmidp.exe# declaration
+
+LIBNAME=j9wmidp# declaration
+
+.c.obj:
+	$(cc) $(cflags) $(cvarsmt) -DWIN32 -Ogityb1 -Gs -GF -Zm300 -DJ9VMBYTECODES /I..\include $(VMDEBUG) $*.c
+
+.cpp.obj:
+	$(cc) $(cflags) $(cvarsmt) -DWIN32 -Ogityb1 -Gs -GF -Zm300 -DJ9VMBYTECODES /I..\include $(VMDEBUG) $*.cpp
+
+.asm.obj:
+	ml /c /Cp /W3 /nologo /coff /Zm -DWIN32  $<
+
+BUILDFILES1 = main_midp.obj
+
+
+
+
+MDLLIBFILES1 = ..\lib\j9fdlibm.lib ..\lib\j9oebcutil.lib ..\lib\j9prt.lib ..\lib\j9exelib.lib ..\lib\j9util.lib
+MDLLIBFILES2 = ..\lib\j9vm.lib
+
+all: \
+	 $(EXENAME)
+
+$(EXENAME):\
+	$(BUILDFILES1) $(MDLLIBFILES1) $(MDLLIBFILES2) 
+	rc $(LIBNAME).rc
+	link $(guilflags) $(VMLINK) -out:$(EXENAME) -subsystem:windows -machine:$(CPU) setargv.obj winmm.lib $(BUILDFILES1) $(MDLLIBFILES1) $(MDLLIBFILES2) $(LIBNAME).res $(guilibsmt) 
+

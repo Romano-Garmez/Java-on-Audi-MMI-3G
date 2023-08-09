@@ -1,0 +1,8 @@
+JVMJ9VM019E Fatal error: Unable to find and initialize required class java/lang/Object
+JVMJ9VM020I Searched in /mnt/sdcard10t12/j9/bin/lib/jclFoundation10/classes.zip
+JVMJ9VM020I Searched in /mnt/sdcard10t12/j9/bin/lib/charconv.zip
+JVMJ9VM020I Searched in /mnt/sdcard10t12/j9/bin/lib/jclFoundation10/locale.zip
+JVMJ9VM023I This may indicate that JAVA_HOME is incorrect, or that class libraries are not installed
+JVMJ9VM015W Initialization error for library jclfoun10_23(14): JVMJ9VM009E J9VMDllMain failed
+JVMEXEX013E Internal VM error: Failed to create Java VM
+JVMEXEX014I Run /mnt/sdcard10t12/j9/bin/j9 -help for usage

@@ -1,0 +1,4 @@
+j9 -Djava.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/j9/bin:/lsd -Dcom.ibm.oti.vm.bootstrap.library.path=.:/proc/boot:/lib:/lib/dll:/usr/lib:/usr/lib/dll:/j9/bin:/lsd -Xmca8k -Xmco8k -Xmo16384k -Xmoi0 -Xmn512k -Xmx18432k -DUseIconExtractor -DSLOG=Ext.Benchmark=3 -DNoTraceClient=true -DNoTmcReadOut -DTmcWindowSize=15 -Djdsi.3SoftOSGi=true -Ddsi.debuglevel=2 -Djdsi.noDispatcher -Ddsi.channel.priority=+1 -Ddsi.decoder.priority=+1 -Ddsi.maxPacketLength=16384 -Ddsi.channel=msgpassing -Dshowcombi=true -Dde.audi.tghu.engineering.base_dir=/HBpersistence/engdefs -DImageRoot=/lsd/images -jxe:/lsd/lsd.jxe 
+
+
+# This is the only java process already running on the car. It handles the green engineering menu. 

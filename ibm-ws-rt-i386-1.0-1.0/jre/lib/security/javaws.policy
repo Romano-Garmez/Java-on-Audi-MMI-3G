@@ -1,0 +1,18 @@
+//
+// @(#)src/sov/config/javaws.policy, webstart, wsdev, 20060704 1.6
+// ===========================================================================
+// Licensed Materials - Property of IBM
+// "Restricted Materials of IBM"
+//
+// IBM SDK, Java(tm) 2 Technology Edition, v1.4.2
+// (C) Copyright IBM Corp. 1998, 2002. All Rights Reserved
+// ===========================================================================
+//
+
+// @(#)javaws.policy	1.7 00/09/18
+
+grant codeBase "file:${jnlpx.home}/javaws.jar" {
+    permission java.security.AllPermission;
+};
+
+

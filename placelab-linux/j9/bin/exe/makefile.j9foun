@@ -1,0 +1,46 @@
+# Makefile for module 'exe.j9'
+# (c) Copyright IBM Corp. 2001, 2002 All Rights Reserved
+# Timestamp: 2.0, 09/13/2002
+#
+# 
+
+
+EXENAME=../j9foun# declaration
+
+LIBNAME=j9foun# declaration
+
+CFLAGS=-O -s -DLINUX -D_REENTRANT -DJ9X86 -DJ9VMBYTECODES -I../include $(VMDEBUG)
+
+
+.SUFFIXES:.cpp
+.cpp.o:
+	$(CC) -O -s -DLINUX -D_REENTRANT -DJ9X86 -DJ9VMBYTECODES -I../include $(VMDEBUG) -c $<
+
+AS=as
+ASFLAGS= -o $@ 
+
+BUILDFILES1 = main_foun.o
+
+
+
+
+MDLLIBFILES1 = ../lib/libj9fdlibm.a ../lib/libj9oebcutil.a ../libj9prt20.so ../lib/libj9exelib.a ../lib/libj9util.a
+MDLLIBFILES2 = ../libj9vm20.so
+
+all: \
+	 $(EXENAME)
+
+$(EXENAME):\
+	$(BUILDFILES1) $(MDLLIBFILES1) $(MDLLIBFILES2) 
+	$(CC) -L. -L.. -L../lib $(VMLINK) \
+	$(BUILDFILES1) -Xlinker --start-group \
+	\
+	-lj9vm20 \
+	-lj9fdlibm \
+	-lj9oebcutil \
+	-lj9prt20 \
+	-lj9exelib \
+	-lj9util -Xlinker --end-group \
+	\
+	-o $@ -lm -lpthread -lc -ldl -Xlinker -rpath-link -Xlinker ..
+

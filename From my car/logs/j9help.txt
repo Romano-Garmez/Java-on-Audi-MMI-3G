@@ -1,0 +1,37 @@
+Licensed Materials - Property of IBM
+
+J9 - VM for the Java(TM) platform, Version 2.3
+(c) Copyright IBM Corp. 1991, 2006  All Rights Reserved
+Target: 20060208_05219_lHdFGq (QNX 6.3.2 sh4)
+JIT  - 20060207_1800_r8
+
+IBM is a registered trademark of IBM Corp.
+Java and all Java-based marks and logos are trademarks or registered
+trademarks of Sun Microsystems, Inc.
+
+Usage:	/mnt/sdcard10t12/j9/bin/j9 [options] classname [args...]
+Usage:	/mnt/sdcard10t12/j9/bin/j9 [options] -jxe:<jxeFile> [args...]
+Usage:	/mnt/sdcard10t12/j9/bin/j9 [-jxe] [options] <jxeFile> [args...]
+
+[options]
+  -classpath <path>
+  -cp <path>       set classpath to <path>.
+  -jxe:<jxeFile>   run the named jxe file.
+  -jxe <jxeFile>   places jxeFile on the classpath and executes the startup
+                    class found in jxeFile.
+  -jxespace:<physicalAddr>,<size>,<logicalAddr>
+                   map memory region for jxes, (values are in hex).
+  -jxeaddr:<logicalAddr>
+                   run a jxe directly from memory, (address is in hex).
+  -D<prop>=<val>   set the value of a system property.
+
+  -debug:<options> enable debug, JDWP standard <options>.
+
+  -jcl:<config>[:options]
+                   specify which JCL DLL to use (e.g. cdc, cldc, ...).
+
+  -verbose[:class,gc,stack,sizes]
+                   enable verbose output (default=class).
+
+  -verify          enable class file verification.
+  -X               print help on non-standard options.

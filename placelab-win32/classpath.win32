@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="srcx"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdbm-0.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hsqldb.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/RXTXcomm.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mysql.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/runtime.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jface.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/swt/win32/swt.jar"/>
+	<classpathentry kind="lib" path="lib/bluetooth/BlueCove.jar"/>
+	<classpathentry kind="lib" path="midpbuild/lib/series60.zip"/>
+	<classpathentry kind="lib" path="lib/openhash.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

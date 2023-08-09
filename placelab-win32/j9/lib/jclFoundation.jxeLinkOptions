@@ -1,0 +1,14 @@
+#--------------------------------------------------------------------
+# (c) Copyright IBM Corp 1999, 2003
+#--------------------------------------------------------------------
+# jxeLink options for jclFoundation
+#--------------------------------------------------------------------
+
+-cp "{{jxeLink.current.file.dir}}{{/}}jclFoundation{{/}}classes.zip"
+-cp "{{jxeLink.current.file.dir}}{{/}}charconv.zip"
+-cp "{{jxeLink.current.file.dir}}{{/}}jclFoundation{{/}}locale.zip"
+
+#--------------------------------------------------------------------
+# Turn off the extension class loader
+#--------------------------------------------------------------------
+-vmOption -Djava.ext.dirs=
