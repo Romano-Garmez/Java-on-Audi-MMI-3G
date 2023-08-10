@@ -1,6 +1,5 @@
 # Doom-on-Audi-MMI-3G
  
-
 # Note: I have now sold my Audi with this infotainment system, so I will not be doing any more work on this project. In case this is useful to anyone else, I'm publishing it anyway.
 
 Not yet functional, still just experimenting.
@@ -13,8 +12,8 @@ To Do:
 - Any other issues that show up along the way
 ```
 
-J9
-J9 is the java virtual machine already installed on every Audi MMI 3G system. Using scripts, you can dump most of J9's libraries to an SD card, but not the J9 executable itself. 
+# J9
+J9 is the Java virtual machine already installed on every Audi MMI 3G system. Using scripts, you can dump most of J9's libraries to an SD card, but not the J9 executable itself. 
 You can, however, find J9 when dumping the ifs-root image: https://www.audizine.com/forum/showthread.php/951168-Extracting-ifs-root-ifs-Image-File 
 I've been trying to piece together all of J9 from the bits I can pull from my car, the bits documented online, and other versions of J9 for other platforms.
 There's a version of J9 included with some placelab downloads, and IBM has distributed it in some software, so that is included in this repo because it's otherwise almost impossible to track down.
